@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { TextField } from '../TextField';
 
-
 export const NewMovie = () => {
   // Increase the count after successful form submission
 
@@ -11,9 +10,13 @@ export const NewMovie = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [imgUrl, setImgUrl] = useState('');
-  const [imdbUrl, setImdbUrl] = useState(''); 
+  const [imdbUrl, setImdbUrl] = useState('');
   const [imdbId, setImdbId] = useState('');
-  const isFormValid = title.trim() !== '' && imgUrl.trim() !== '' && imdbUrl.trim() !== '' && imdbId.trim() !== ''; 
+  const isFormValid =
+    title.trim() !== '' &&
+    imgUrl.trim() !== '' &&
+    imdbUrl.trim() !== '' &&
+    imdbId.trim() !== '';
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -42,35 +45,35 @@ export const NewMovie = () => {
         required
       />
 
-      <TextField 
-      name="description"
-      label="Description" 
-      value={description} 
-      onChange={setDescription}
+      <TextField
+        name="description"
+        label="Description"
+        value={description}
+        onChange={setDescription}
       />
 
-      <TextField 
-      name="imgUrl" 
-      label="Image URL" 
-      value={imgUrl} 
-      required
-      onChange={setImgUrl}
+      <TextField
+        name="imgUrl"
+        label="Image URL"
+        value={imgUrl}
+        required
+        onChange={setImgUrl}
       />
 
-      <TextField 
-      name="imdbUrl" 
-      label="Imdb URL" 
-      value={imdbUrl}
-      required 
-      onChange={setImdbUrl}
+      <TextField
+        name="imdbUrl"
+        label="Imdb URL"
+        value={imdbUrl}
+        required
+        onChange={setImdbUrl}
       />
 
-      <TextField 
-      name="imdbId" 
-      label="Imdb ID" 
-      value={imdbId}
-      required 
-      onChange={setImdbId}
+      <TextField
+        name="imdbId"
+        label="Imdb ID"
+        value={imdbId}
+        required
+        onChange={setImdbId}
       />
 
       <div className="field is-grouped">
